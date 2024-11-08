@@ -1,0 +1,175 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+.heart-imagem{
+    float: right;
+    width: 350px;  /* Ajuste o tamanho da imagem aqui */
+    height: auto; /* Mantém a proporção da altura automaticamente */
+    margin-left: 20px; /* Espaço entre o título e a imagem */
+    vertical-align: middle; /* Alinha a imagem com o texto */
+}
+
+.medicao-imagens{
+    float: left;
+    width: 25%;  /* Ajuste o tamanho da imagem aqui */
+    height: auto; /* Mantém a proporção da altura automaticamente */
+    margin-right: 20px; /* Espaço entre o título e a imagem */
+    vertical-align: middle; /* Alinha a imagem com o texto */
+}
+
+/* Cabeçalho */
+header {
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: fixed; /* Fixa a navbar no topo */
+    top: 0;
+    width: 100%; /* Ocupa toda a largura da tela */
+}
+
+header h1 {
+    margin: 0;
+
+}
+
+/* Navegação */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Seções */
+section {
+    padding: 50px;
+    margin: 50px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.tabela-pressao {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+}
+
+/* Estilos para os cabeçalhos da tabela */
+.tabela-pressao th {
+    color: white;
+    padding: 10px;
+}
+
+/* Estilos para as células da tabela */
+.tabela-pressao td, .tabela-pressao th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+/* Estilo para as linhas */
+.tabela-pressao tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Estilo para o hover nas linhas */
+.tabela-pressao tr:hover {
+    background-color: #ddd;
+}
+
+/* Estilo para os formulários */
+
+label, input, textarea {
+    display: flex;
+    width: 97%;
+    margin-bottom: 10px;
+}
+
+input[type="text"], input[type="email"], input[type="number"], input[type="date"], textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Botão de envio */
+input[type="submit"] {
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+}
+/* Estilo da lista de dicas */
+ul {
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+/* Rodapé */
+footer {
+    background-color: #5a9;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    bottom: 0;
+}
+
+.resultado {
+    margin-top: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+/*teste botao tema claro*/
+/* Estilo do botão flutuante */
+#botao-flutuante {
+    position: fixed; /* Fixa o botão no canto superior direito */
+    top: 20px; /* Distância do topo */
+    right: 20px; /* Distância da direita */
+    border-radius: 25px; /* Bordas arredondadas */
+    padding: 10px 20px; /* Espaçamento interno */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra do botão */
+    display: flex; /* Alinha os itens horizontalmente */
+    align-items: center; /* Centraliza os itens */
+    cursor: pointer; /* Muda o cursor ao passar por cima */
+    transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+}
+
+
+.dark .shadow-white {
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.3);
+}
+
+.shadow-lg {
+    --tw-shadow: 0px 15px 10px 3px rgba(0, 0, 0, 0.1), 0px 4px 10px 0px rgb(255 255 255);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #fbfbfb), var(--tw-ring-shadow, 0 0 #ffffff), var(--tw-shadow);
+}

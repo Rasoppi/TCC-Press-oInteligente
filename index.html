@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="imagens/coracaofavicon16.png" rel="shortcut icon" type="image/png">
+    <meta name="description" content="Site de monitoramento de pressão arterial para idosos.">
+    <title>PressãoInteligente</title>
+    <link rel="stylesheet" href="imagens.css">
+</head>
+<body class="font-sans bg-white text-black dark:bg-dark dark:text-white m-0 p-0">
+
+    <!-- Cabeçalho e Navegação -->
+    <header class="bg-green-600 text-white p-5 text-center fixed top-0 w-full z-10 " id="header">
+        <h1 class="text-2xl font-bold">PressãoInteligente</h1>
+        <div id="botao-flutuante" onclick="toggleTheme()" class="cursor-pointer bg-white top-5 right-5 rounded-full p-3 shadow-lg flex items-center cursor-pointer transition duration-300 hover:bg-gray-300 hover:bg-gray-200">
+            <img id="icone-tema" class="w-8 h-8" src="https://cdn.icon-icons.com/icons2/488/PNG/512/moon_47708.png" alt="Tema Claro" />
+        </div>
+        <nav>
+            <ul class="list-none p-0 m-0" id="nav">
+                <li class="inline mr-5"><a href="#home" class=" no-underline text-lg hover:underline">Home</a></li>
+                <li class="inline mr-5"><a href="#monitoramento" class="no-underline text-lg hover:underline">Monitoramento</a></li>
+                <li class="inline mr-5"><a href="#dicas" class=" no-underline text-lg hover:underline">Dicas de Saúde</a></li>
+                <li class="inline"><a href="#contato" class=" no-underline text-lg hover:underline">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+       <!-- Seção principal: Introdução -->
+    <section id="home" class="bg-white p-15 rounded shadow mb-5">
+        <br>
+        <hr class="my-4">
+        <h2 class="text-xl font-semibold mt-4">O que é Hipertensão?</h2>
+        <img class="heart-imagem float-right w-1/3 h-auto ml-5" src="https://st.depositphotos.com/2065849/3646/i/600/depositphotos_36463407-stock-photo-blood-pressure.jpg" alt="Imagem do Controle de Pressão">
+        <p>A hipertensão, ou pressão alta, é uma condição médica crônica em que a pressão nas artérias se mantém elevada de maneira persistente. Isso significa que o coração precisa fazer mais força do que o normal para bombear o sangue através dos vasos sanguíneos. A hipertensão é frequentemente referida como um "assassino silencioso" porque, na maioria das vezes, não apresenta sintomas visíveis, mas pode levar a complicações graves de saúde se não for controlada adequadamente.</p>
+
+        <h2 class="text-xl font-semibold mt-4">Como a Pressão Arterial Funciona</h2>
+        <p>A pressão arterial é a força que o sangue exerce sobre as paredes das artérias à medida que o coração bombeia sangue para todo o corpo. Ela é medida em milímetros de mercúrio (mmHg) e é composta por dois valores:<br>
+            Pressão Sistólica (o número superior): Representa a pressão nas artérias quando o coração se contrai e bombeia sangue.<br>
+            Pressão Diastólica (o número inferior): Representa a pressão nas artérias quando o coração está em repouso, entre os batimentos.<br>
+            Por exemplo, uma pressão arterial de 120/80 mmHg significa que a pressão sistólica é 120 mmHg e a diastólica é 80 mmHg.
+        </p>
+
+        <img class="medicao-imagens float-left w-1/4 h-auto mr-5 mt-4" src="https://st3.depositphotos.com/4278641/14466/i/600/depositphotos_144660817-stock-photo-white-electric-tonometer-with-stethoscope.jpg" alt="imagem de controle">
+        
+        <h2 class="text-xl font-semibold mt-4">Tipos de Hipertensão</h2>
+        <p>1. Hipertensão Primária (Essencial): Este é o tipo mais comum, afetando cerca de 90% das pessoas com hipertensão. Não há uma causa clara ou única identificada, e ela geralmente se desenvolve gradualmente ao longo de muitos anos.<br>Acredita-se que uma combinação de fatores genéticos, dieta e estilo de vida contribua para o aumento da pressão arterial.<br>
+            <br>
+            2. Hipertensão Secundária: Esse tipo de hipertensão é causado por outra condição de saúde subjacente, como problemas renais, doenças endócrinas (como distúrbios hormonais), apneia do sono ou o uso de certos medicamentos (como pílulas anticoncepcionais, analgésicos ou descongestionantes). A hipertensão secundária tende a surgir de repente e pode ser mais grave do que a hipertensão primária.
+        </p>
+
+        <h2 class="text-xl font-semibold mt-4">Causas da Hipertensão</h2>
+        <p>A hipertensão primária não tem uma causa exata, mas há vários fatores que contribuem para seu desenvolvimento:</p>
+        <ul class="list-disc list-inside mt-2">
+            <li>Histórico familiar: A hipertensão é hereditária. Se seus pais ou parentes próximos têm pressão alta, você tem maior probabilidade de desenvolvê-la.</li>
+            <li>Idade: À medida que as pessoas envelhecem, o risco de desenvolver hipertensão aumenta. O endurecimento das artérias ao longo do tempo pode contribuir para esse aumento da pressão arterial.</li>
+            <li>O excesso de peso força o coração a trabalhar mais para bombear o sangue, aumentando a pressão arterial.</li>
+            <li>Sedentarismo: A falta de exercício regular pode levar ao ganho de peso e ao aumento da pressão arterial.</li>
+            <li>Dieta rica em sal (sódio): O consumo excessivo de sal pode causar retenção de líquidos, o que aumenta a pressão sanguínea.</li>
+            <li>Consumo elevado de álcool: Beber grandes quantidades de álcool de forma contínua pode elevar a pressão arterial.</li>
+            <li>Tabagismo: O fumo provoca a contração dos vasos sanguíneos e danifica suas paredes, o que pode levar ao aumento da pressão arterial.</li>
+            <li>Estresse: O estresse crônico ou não controlado pode contribuir para o aumento da pressão arterial.</li>
+            <li>Doenças crônicas: Condições como diabetes, doença renal e apneia do sono podem causar ou agravar a hipertensão.</li>
+        </ul>
+    </section>
+    <!-- Seção de Monitoramento -->
+    <section id="monitoramento" class="bg-white p-5 rounded shadow mb-5">
+        <h2 class="text-2xl font-bold mb-4 text-center">Monitore sua Pressão</h2>
+        <form id="pressaoForm" class="bg-white border-white dark:bg-white text-black dark:text-black p-6 rounded-lg shadow-lg dark:shadow-white max-w-lg mx-auto">
+            <label for="sistolica" class="block mb-2">Pressão Sistólica (máxima):</label>
+            <input type="number" id="sistolica" name="sistolica" placeholder="Ex: 120" class="text-black border-gray-300 dark:border-white p-2 rounded mb-4 w-full" />
+            
+            <label for="diastolica" class="block mb-2">Pressão Diastólica (mínima):</label>
+            <input type="number" id="diastolica" name="diastolica" placeholder="Ex: 80" class="text-black border border-gray-300 dark:border-gray-600 p-2 rounded mb-4 w-full" />
+            
+            <label for="data" class="block mb-2">Data da Medição:</label>
+            <input type="date" id="data" name="data" class="text-black border text-black dark:border-gray-600 p-2 rounded mb-4 w-full" />
+            
+            <input type="submit" value="Enviar" class="bg-green-500 dark:bg-blue-700 text-black rounded p-2 cursor-pointer hover:bg-blue-600 dark:hover:bg-blue-600 w-full" id="botaocalculo" />
+        </form>
+        <div class="resultado mt-5 font-bold text-center" id="resultado"></div>
+        <hr class="my-4">
+        <h2 class="text-xl font-semibold">Tabela Pressão Arterial</h2>
+
+        <table id="tabelainformativa" class="min-w-full border border-gray-300 dark:border-gray-600 rounded-lg shadow-lg">
+            <thead class="bg-green-600 dark:bg-gray-400 text-white font-semibold" id="tabelastyl">
+                <tr>
+                    <th class="p-3 border border-gray-300 dark:border-gray-600">Classificação</th>
+                    <th class="p-3 border border-gray-300 dark:border-gray-600">Pressão Sistólica (mm Hg)</th>
+                    <th class="p-3 border border-gray-300 dark:border-gray-600">Pressão Diastólica (mm Hg)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="border-b border-gray-300 dark:border-gray-600 bg-white text-black 'dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600">
+                    <td class="p-3 font-bold text-center">Normal</td>
+                    <td class="p-3 font-bold text-center">Menor que 120</td>
+                    <td class="p-3 font-bold text-center">Menor que 80</td>
+                </tr>
+                <tr class="border-b border-gray-300 dark:border-gray-600 bg-white text-black dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600">
+                    <td class="p-3 font-bold text-center">Elevada</td>
+                    <td class="p-3 font-bold text-center">Menor que 129</td>
+                    <td class="p-3 font-bold text-center">Menor que 80</td>
+                </tr>
+                <tr class="border-b border-gray-300 dark:border-gray-600 bg-white text-black dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600">
+                    <td class="p-3 font-bold text-center">Hipertensão Estágio 1</td>
+                    <td class="p-3 font-bold text-center">Menor que 139</td>
+                    <td class="p-3 font-bold text-center">80 - 89</td>
+                </tr>
+                <tr class="border-b border-gray-300 dark:border-gray-600 bg-white  text-black dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600">
+                    <td class="p-3 font-bold text-center">Hipertensão Estágio 2</td>
+                    <td class="p-3 font-bold text-center">Menor que 179</td>
+                    <td class="p-3 font-bold text-center">90 ou mais</td>
+                </tr>
+                <tr class="border-b border-gray-300 dark:border-gray-600 bg-white text-black dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600">
+                    <td class="p-3 font-bold text-center">Crise Hipertensiva</td>
+                    <td class="p-3 font-bold text-center">Maior que 180</td>
+                    <td class="p-3 font-bold text-center">Maior que 120</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Seção de Dicas de Saúde -->
+    <section id="dicas" class="bg-white p-5 rounded shadow mb-5">
+        <h2 class="text-xl font-semibold">Dicas de Estilo de Vida Saudável</h2>
+        <p>Controlar a pressão arterial é essencial para prevenir complicações graves, como doenças cardíacas e AVC. Para isso, recomenda-se consultar um médico para avaliação e possível prescrição de medicamentos, além de monitorar regularmente a pressão arterial. Mudanças no estilo de vida também são fundamentais: adote uma dieta saudável, reduzindo o consumo de sal e aumentando a ingestão de frutas, vegetais e grãos integrais; pratique exercícios físicos regularmente, visando pelo menos 150 minutos por semana; mantenha um peso saudável; e gerencie o estresse através de técnicas de relaxamento, como meditação e ioga. Limite o consumo de álcool a uma bebida por dia para mulheres e duas para homens, e evite o tabagismo. Garantir um sono adequado de 7 a 8 horas por noite também é crucial. Ao seguir essas orientações médicas e fazer mudanças no estilo de vida, é possível controlar a pressão arterial de maneira eficaz, promovendo uma vida mais saudável.</p>
+        <img class="heart-imagem float-right" src="https://st4.depositphotos.com/16122460/25688/i/600/depositphotos_256883930-stock-photo-bowl-with-products-for-heart.jpg">
+        <br>
+        <p>Para controlar a pressão arterial, siga estas dicas:</p>
+        <ul class="list-disc list-inside">
+            <li class="mb-2">Mantenha uma dieta equilibrada e saudável, rica em frutas, legumes e grãos integrais.</li>
+            <li class="mb-2">Reduza o consumo de sódio e evite alimentos processados.</li>
+            <li class="mb-2">Pratique atividade física regularmente, pelo menos 150 minutos de exercícios moderados por semana.</li>
+            <li class="mb-2">Evite o consumo excessivo de álcool e não fume.</li>
+            <li class="mb-2">Mantenha um peso saudável e monitore sua pressão arterial regularmente.</li>
+            <li class="mb-2">Gerencie o estresse por meio de técnicas de relaxamento e exercícios de respiração.</li>
+        </ul>
+        
+        <hr>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="bg-green-600 text-white text-center p-4 mt-4" id="footer">
+        <p>&copy; 2024 PressãoInteligente. Todos os direitos reservados. Gabriel Rasoppi</p>
+    </footer>
+    <script>
+  document.getElementById('pressaoForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const sistolica = parseInt(document.getElementById('sistolica').value);
+    const diastolica = parseInt(document.getElementById('diastolica').value);
+    const data = document.getElementById('data').value;
+
+    let classificacao = '';
+    let icon = '';
+    let mensagemAdicional = '';  // Nova variável para a mensagem adicional
+
+
+    // Verifica se os valores são números e maiores que zero
+    if (isNaN(sistolica) || isNaN(diastolica) || sistolica <= 0 || diastolica <= 0) {
+        classificacao = 'Dados inválidos';
+        icon = 'error'; // Ícone vermelho para dados inválidos
+        mensagemAdicional = 'Por favor, insira valores válidos para a pressão sistólica e diastólica.'
+    } else if (sistolica <=79 && diastolica <= 49) {
+        classificacao = 'Muito Baixa';
+        icon = 'warning';
+        mensagemAdicional = 'A pressão está muito baixa. Procure orientação médica.';
+    } else if (sistolica >=80  && sistolica <=119 && diastolica >= 50 && diastolica <=79) {
+        classificacao = 'Baixa';
+        icon = 'warning';
+        mensagemAdicional = 'A pressão está muito baixa. Procure orientação médica.';
+    } else if (sistolica <= 120 && diastolica >= 75 && diastolica <=80 ) {
+        classificacao = 'Otima';
+        mensagemAdicional = 'Sua pressão está Otima.Continue monitorando sua pressão regularmente para manter esses bons níveis.';
+        icon = 'success'; 
+    } else if (sistolica <= 120 && sistolica <= 129 && diastolica >= 80 && diastolica <= 84) {
+        classificacao = 'Normal';
+        icon = 'success'; // Ícone verde para normal
+        mensagemAdicional = 'Continue monitorando sua pressão regularmente para manter esses bons níveis.';
+    } else if (sistolica >=130 && sistolica <=139  && diastolica >= 85 && diastolica <= 89) {
+        classificacao = 'Pré-Hipertensão';
+        icon = 'warning'; // Ícone amarelo para elevada
+        mensagemAdicional = 'Atenção! Sua pressão está elevada. Considere adotar hábitos saudáveis para evitar a hipertensão.';
+    } else if (sistolica >=140 && sistolica <=149 && diastolica >= 90 && diastolica < 94) {
+        classificacao = 'Hipertensão Estágio 1';
+        icon = 'warning'; // Ícone amarelo para hipertensão estágio 1
+        mensagemAdicional = 'Recomenda-se buscar orientação médica para iniciar o controle da hipertensão.';
+    } else if (sistolica >=150 && sistolica <=159 && diastolica >= 95 && diastolica <= 99) {
+        classificacao = 'Hipertensão Estágio 2';
+        icon = 'warning'; // Ícone amarelo para hipertensão estágio 2
+        mensagemAdicional = 'Procure um médico o quanto antes para iniciar o tratamento da hipertensão.';
+    } else if (sistolica >=160 &&  sistolica <= 180 && diastolica >= 100) {
+        classificacao = 'Crise Hipertensiva, procure um médico urgente!!';
+        icon = 'error'; // Ícone vermelho para crise
+        mensagemAdicional = 'URGENTE: Dirija-se imediatamente a uma emergência médica!';
+    }
+
+    // Atualiza o resultado com a classificação
+    const resultadoDiv = document.getElementById('resultado');
+    resultadoDiv.innerHTML = `Data: ${data}<br>Pressão: ${sistolica}/${diastolica} mm Hg<br>Classificação: ${mensagemAdicional}`;
+
+    // Exibe o alerta com SweetAlert
+    Swal.fire({
+        title: `Classificação: ${classificacao}`,
+        icon: icon, 
+           confirmButtonText: 'OK'
+    });
+});
+
+      // JavaScript para alternar o tema e as cores das seções
+      let isLightTheme = true; // Estado inicial do tema
+
+        function toggleTheme() {
+            const body = document.body;
+            const sections = document.querySelectorAll('section');
+            const form = document.getElementById('pressaoForm');
+            const iconeTema = document.getElementById('icone-tema');
+            const table = document.getElementById('tabelainformativa')
+            const header = document.getElementById('header');
+            const div = document.getElementById('botao-flutuante');
+            const thead = document.getElementById('tabelastyl');
+            const footer = document.getElementById('footer');
+            const botaocalculo = document.getElementById('botaocalculo');
+            const formulário = document.getElementById('')
+
+            if (isLightTheme) {
+                body.classList.remove('bg-white', 'text-black');
+                body.classList.add('bg-black', 'text-white');
+                iconeTema.src = "https://parametricmonkey.com/wp-content/uploads/2018/03/3_11_Daylight-Autonomy_900x900-640x640.png"; // Ícone para tema escuro
+                
+                // Muda a cor das seções e do formulário para preto com texto branco
+                sections.forEach(section => {
+                    section.classList.remove('bg-white', 'text-black');
+                    section.classList.add('bg-black', 'text-white');
+                });
+
+                // Muda o estilo do formulário
+                form.classList.remove('bg-white', 'text-black');
+                form.classList.add('bg-black', 'text-white',);
+
+                table.classList.remove('bg-white');
+                table.classList.add('bg-gray-400');
+
+                header.classList.remove('bg-green-600');
+                header.classList.add('bg-blue-500');
+
+                div.classList.remove('bg-white');
+                div.classList.add('bg-black');
+
+                thead.classList.remove('bg-green-600');
+                thead.classList.add('bg-blue-500');
+
+                footer.classList.remove('bg-green-600');
+                footer.classList.add('bg-blue-500');
+
+                botaocalculo.classList.remove('bg-green-500');
+                botaocalculo.classList.add('bg-blue-500');
+
+            } else {
+                body.classList.remove('bg-black', 'text-white');
+                body.classList.add('bg-white', 'text-black');
+                iconeTema.src = "https://cdn.icon-icons.com/icons2/488/PNG/512/moon_47708.png"; // Ícone para tema claro
+                
+                // Muda a cor das seções e do formulário para claro com texto preto
+                sections.forEach(section => {
+                    section.classList.remove('bg-black', 'text-white');
+                    section.classList.add('bg-white', 'text-black');
+                });
+
+                // Muda o estilo do formulário
+                form.classList.remove('bg-black','text-white');
+                form.classList.add('bg-white','text-black');
+
+                table.classList.remove('bg-gray-400');
+                table.classList.add('bg-white');
+
+                header.classList.remove('bg-blue-500');
+                header.classList.add('bg-green-600');
+
+                div.classList.remove('bg-black');
+                div.classList.add('bg-white');
+
+                thead.classList.remove('bg-blue-500');
+                thead.classList.add('bg-green-600');
+
+                footer.classList.remove('bg-blue-500');
+                footer.classList.add('bg-green-600');
+
+                botaocalculo.classList.remove('bg-blue-500');
+                botaocalculo.classList.add('bg-green-500');
+
+            }
+            isLightTheme = !isLightTheme; // Alterna o estado do tema
+        }
+
+        document.getElementById('toggleTema').addEventListener('click', toggleTheme);
+        function toggleDarkMode() {
+            // Alterna a classe 'dark' no elemento <body>
+            document.body.classList.toggle('dark');
+        }
+        
+    </script>
+</body>
+</html>
