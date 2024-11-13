@@ -243,6 +243,7 @@ footer {
 
     /* Ajusta os espaços entre elementos */
     section {
+        padding:30px;
         margin: 5px;
     }
 
