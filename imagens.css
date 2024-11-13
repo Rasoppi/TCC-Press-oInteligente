@@ -252,3 +252,29 @@ footer {
         font-size: 0.8em;
     }
 }
+
+@media (max-width: 300px) {
+
+    /* Ajusta o cabeçalho */
+    header h1 {
+        font-size: 1em;
+    }
+
+    /* Ajusta o formulário */
+    input[type="submit"] {
+        font-size: 0.8em;
+        padding: 4px;
+    }
+
+    /* Ajusta os espaços entre elementos */
+    section {
+        padding:10px;
+        margin: 2px;
+    }
+
+    /* Ajuste no rodapé */
+    footer {
+        font-size: 0.5em;
+    }
+}
+
