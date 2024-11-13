@@ -163,4 +163,6 @@ footer {
     cursor: pointer; /* Muda o cursor ao passar por cima */
     transition: background-color 0.3s; /* Transição suave para a cor de fundo */
 }
-
+.box-shadow{
+   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
