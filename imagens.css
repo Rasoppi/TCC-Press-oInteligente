@@ -163,6 +163,85 @@ footer {
     cursor: pointer; /* Muda o cursor ao passar por cima */
     transition: background-color 0.3s; /* Transição suave para a cor de fundo */
 }
-.box-shadow{
-   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+
+@media (max-width: 768px) {
+
+    /* Ajusta o tamanho das imagens */
+    .heart-imagem, .medicao-imagens {
+        width: 100%;
+        margin: 0;
+        float: none;
+        display: block;
+        text-align: center;
+    }
+
+    /* Ajusta o cabeçalho */
+    header {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    /* Ajusta a navegação para dispositivos móveis */
+    nav ul {
+        text-align: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    /* Ajusta as tabelas para telas menores */
+    .tabela-pressao {
+        font-size: 16px;
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    /* Ajusta os formulários */
+    input[type="text"], input[type="email"], input[type="number"], input[type="date"], textarea {
+        width: 100%;
+    }
+
+    /* Reduz o tamanho do botão flutuante */
+    #botao-flutuante {
+        top: 10px;
+        right: 10px;
+        padding: 8px 15px;
+    }
+
+    /* Ajusta o rodapé */
+    footer {
+        font-size: 0.9em;
+    }
+}
+
+/* Tela extra pequena (celulares em modo retrato) */
+@media (max-width: 480px) {
+
+    /* Ajusta o cabeçalho */
+    header h1 {
+        font-size: 1.2em;
+    }
+
+    /* Ajusta o formulário */
+    input[type="submit"] {
+        font-size: 1em;
+        padding: 8px;
+    }
+
+    /* Ajusta os espaços entre elementos */
+    section {
+        padding: 20px;
+        margin: 20px;
+    }
+
+    /* Ajuste no rodapé */
+    footer {
+        font-size: 0.8em;
+    }
 }
