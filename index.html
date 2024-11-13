@@ -235,12 +235,8 @@
                 // Muda a cor das seções e do formulário para preto com texto branco
                 sections.forEach(section => {
                     section.classList.remove('bg-white', 'text-black');
-                    section.classList.add('bg-black', 'text-white');
+                    section.classList.add('bg-gray-700', 'text-white');
                 });
-
-                // Muda o estilo do formulário
-                form.classList.remove('bg-white', 'text-black');
-                form.classList.add('bg-black', 'text-white',);
 
                 table.classList.remove('bg-white');
                 table.classList.add('bg-gray-400');
@@ -267,13 +263,9 @@
                 
                 // Muda a cor das seções e do formulário para claro com texto preto
                 sections.forEach(section => {
-                    section.classList.remove('bg-black', 'text-white');
+                    section.classList.remove('bg-gray-700', 'text-white');
                     section.classList.add('bg-white', 'text-black');
                 });
-
-                // Muda o estilo do formulário
-                form.classList.remove('bg-black','text-white');
-                form.classList.add('bg-white','text-black');
 
                 table.classList.remove('bg-gray-400');
                 table.classList.add('bg-white');
